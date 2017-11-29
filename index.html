@@ -1,22 +1,38 @@
-<!--<!DOCTYPE html>-->
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Test Color Changer</title>
 </head>
 <body>
-  <h1 id="myHeading">Testing Color Input Changes in Vanilla JS</h1>
-  <input type="text" id="myTextInput" placeholder="Type a Color!">
-  <button id="myButton">Change Color</button>
-  <script>
-const myHeading = document.getElementById('myHeading');
-const myButton = document.getElementById('myButton');
-const myTextInput = document.getElementById('myTextInput');
+  
+<div class="jumbotron">
+  <h3 class="display-3 text-center" id="headerChngColor">Color Scheme Tester</h3>
+  <p class="lead text-center">This is a simple color scheme tester created to apply my knowledge gained from the <link href="https://teamtreehouse.com/fullstackfocus" target="_blank">TreeHouse</link> Full-Stack JS course; solidifying my comprehension while building something useful! </p>
+  <div class="text-center">
+    <input type="text" id="hexAColor" placeholder="Type a Color!">
+  <button id="changeColorBtn">Change Color</button>
+  </div>
+  <hr class="my-4">
+  <p class="text-center">I used HTML5, Bootstrap4, and Javascript/ES6 inorder to accomplish this.</p>
+  
+<!--BS4 CDN-->  
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</body>
+</html>
 
-myButton.addEventListener('click', () => {
-  myHeading.style.color = myTextInput.value;
+
+  <script>
+const headerChngColor = document.getElementById('headerChngColor');
+const changeColorBtn = document.getElementById('changeColorBtn');
+const hexAColor = document.getElementById('hexAColor');
+
+changeColorBtn.addEventListener('click', () => {
+  headerChngColor.style.color = hexAColor.value;
 });
 </script>
 </body>
